@@ -18,6 +18,5 @@ csv.each do |row|
   puts "#{t.name}, #{t.email} saved"
 end
 
-ActiveRecord::Base.connection.execute("SELECT AddGeometryColumn('restaurants_api_development','restaurants', 'geom', 4326, 'POINT', 2);")
 ActiveRecord::Base.connection.execute("UPDATE restaurants SET geom = ST_SetSRID(ST_MakePoint(lng, lat), 4326);")
 ActiveRecord::Base.connection.execute("CREATE INDEX idx_restaurants_geom ON restaurants USING gist(geom);")
