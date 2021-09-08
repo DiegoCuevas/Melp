@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_174325) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.geometry "geom", limit: {:srid=>4326, :type=>"st_point"}
+    t.index ["geom"], name: "idx_restaurants_geom", using: :gist
   end
 
 end
