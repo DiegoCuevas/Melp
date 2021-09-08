@@ -16,3 +16,6 @@ The app should expose an API in `/restaurant`
 
 ## Resources 
 - Restaurant (id, name, rating, site, email, phone, street, city, state, lat, lng)
+
+## Postman collection
+- if you have postman, you could import the collection from this link: `https://www.getpostman.com/collections/e5f04fdf19ff6ff4c52d`
