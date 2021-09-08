@@ -37,8 +37,12 @@ class RestaurantsController < ApplicationController
   
   # /restaurants/statistics?latitude=x&longitude=y&radius=z
   def statistics
-    @statistics = Restaurant.search(params[:longitude], params[:latitude], params[:radius])
-    render json: @statistics
+    if params[:longitude].present? && params[:latitude].present? && params[:radius].present?
+      @statistics = Restaurant.search(params[:longitude], params[:latitude], params[:radius])
+      render json: @statistics
+    else
+      render json: {message: "You need send the following parameters: 'longitude', 'latitude', 'radius'"} , status: :unprocessable_entity
+    end
   end
 
   private
