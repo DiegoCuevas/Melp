@@ -34,6 +34,12 @@ class  Api::RestaurantsController < ApplicationController
   def destroy
     @restaurant.destroy
   end
+  
+  # /restaurants/statistics?latitude=x&longitude=y&radius=z
+  def statistics
+    @statistics = Restaurant.search(params[:longitude], params[:latitude], params[:radius])
+    render json: @statistics
+  end
 
   private
     def set_restaurant
