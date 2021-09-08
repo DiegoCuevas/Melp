@@ -1,10 +1,10 @@
 # Melp
 Clone this repo, then run:
-1. install the gems </br> bundle install
-2. create the db </br>  rails db:create
-3. add the PostGIS extension </br>  rails db:gis:setup
-4. run the migrations </br>  rails db:migrate
-5. run the seed data </br>  rails db:seed
+1. install the gems </br> `bundle install`
+2. create the db </br>  `rails db:create`
+3. add the PostGIS extension </br>  `rails db:gis:setup`
+4. run the migrations </br>  `rails db:migrate`
+5. run the seed data </br>  `rails db:seed`
 
 ## Public API
 
