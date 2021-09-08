@@ -45,6 +45,9 @@ GEM
     activerecord (6.0.4.1)
       activemodel (= 6.0.4.1)
       activesupport (= 6.0.4.1)
+    activerecord-postgis-adapter (6.0.3)
+      activerecord (~> 6.0.0)
+      rgeo-activerecord (~> 6.0)
     activestorage (6.0.4.1)
       actionpack (= 6.0.4.1)
       activejob (= 6.0.4.1)
@@ -122,6 +125,10 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rgeo (2.3.0)
+    rgeo-activerecord (6.2.2)
+      activerecord (>= 5.0)
+      rgeo (>= 1.0.0)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -163,6 +170,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  activerecord-postgis-adapter
   bootsnap (>= 1.4.2)
   byebug
   listen (~> 3.2)
